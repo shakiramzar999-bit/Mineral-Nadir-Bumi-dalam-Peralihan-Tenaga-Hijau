@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mineral Nadir Bumi dalam Peralihan Tenaga Hijau: Dilema Kelestarian Alam Sekitar dan Kepentingan Geopolitik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            emeraldDeep: '#064e3b',
+            slateDark: '#0f172a',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    /* Custom scrollbar & subtle visual effects */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #10b981;
+      border-radius: 9999px;
+    }
+
+    /* Atmospheric Layered CSS Backdrop (Deep Slate-Navy + Emerald/Teal/Cyan Aurora + Mineral Lattice) */
+    body.atmospheric-bg {
+      background-color: #f1f5f9;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 15% -5%, rgba(16, 185, 129, 0.14), transparent 60%),
+        radial-gradient(ellipse 65% 45% at 88% 12%, rgba(6, 182, 212, 0.12), transparent 55%),
+        radial-gradient(ellipse 70% 50% at 50% 95%, rgba(20, 184, 166, 0.10), transparent 60%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23059669' stroke-opacity='0.07' stroke-width='1'%3E%3Cpolygon points='32,2 60,18 60,46 32,62 4,46 4,18'/%3E%3Cline x1='32' y1='2' x2='32' y2='62'/%3E%3Cline x1='4' y1='18' x2='60' y2='46'/%3E%3Cline x1='60' y1='18' x2='4' y2='46'/%3E%3C/g%3E%3C/svg%3E");
+      background-attachment: fixed;
+    }
+
+    html.dark body.atmospheric-bg {
+      background-color: #070d19;
+      background-image:
+        radial-gradient(ellipse 85% 55% at 12% -8%, rgba(16, 185, 129, 0.22), transparent 62%),
+        radial-gradient(ellipse 70% 50% at 88% 14%, rgba(6, 182, 212, 0.16), transparent 58%),
+        radial-gradient(ellipse 75% 55% at 52% 96%, rgba(13, 148, 136, 0.18), transparent 62%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%2334d399' stroke-opacity='0.06' stroke-width='1'%3E%3Cpolygon points='32,2 60,18 60,46 32,62 4,46 4,18'/%3E%3Cline x1='32' y1='2' x2='32' y2='62'/%3E%3Cline x1='4' y1='18' x2='60' y2='46'/%3E%3Cline x1='60' y1='18' x2='4' y2='46'/%3E%3C/g%3E%3C/svg%3E");
+      background-attachment: fixed;
+    }
+
+    /* Crisp Glassmorphic Card Surfaces */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(16, 185, 129, 0.22);
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+    }
+
+    html.dark .glass-card {
+      background: rgba(15, 23, 42, 0.68);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(52, 211, 153, 0.16);
+      box-shadow: 0 14px 36px -12px rgba(2, 6, 23, 0.65);
+    }
+
+    .glass-subcard {
+      background: rgba(248, 250, 252, 0.72);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    html.dark .glass-subcard {
+      background: rgba(7, 13, 25, 0.58);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(52, 211, 153, 0.14);
+    }
+
+    .glass-nav {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .bar-animate {
+      transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .element-tile {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .element-tile:hover {
+      transform: translateY(-4px) scale(1.04);
+    }
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="atmospheric-bg text-slate-800 dark:text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-300">
+
+  <!-- Top Reading Progress Bar -->
+  <div class="fixed top-0 left-0 right-0 h-1 z-50 bg-slate-200/40 dark:bg-slate-800/60">
+    <div id="readingProgress" class="h-full bg-gradient-to-r from-emerald-500 via-teal-400 to-amber-500 w-0 transition-all duration-150"></div>
+  </div>
+
+  <!-- Sticky Navigation Header -->
+  <header class="sticky top-0 z-40 glass-nav bg-white/80 dark:bg-[#070d19]/80 border-b border-emerald-500/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Brand / Title -->
+        <a href="#hero" class="flex items-center gap-2.5 group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white font-bold shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+            REE
+          </div>
+          <div class="hidden sm:block">
+            <span class="font-bold text-sm tracking-tight text-slate-900 dark:text-white block leading-none">Mineral Nadir Bumi dalam Peralihan Tenaga Hijau</span>
+            <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium">Dilema Kelestarian Alam Sekitar &amp; Kepentingan Geopolitik</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1 text-xs font-medium">
+          <a href="#pengenalan" class="px-2.5 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition">1.0 Pengenalan</a>
+          <a href="#kegunaan" class="px-2.5 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition">2.0 Kegunaan</a>
+          <a href="#geopolitik" class="px-2.5 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition">3.0 Permintaan Global</a>
+          <a href="#malaysia" class="px-2.5 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition">4.0 Konteks Malaysia</a>
+          <a href="#antarabangsa" class="px-2.5 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition">5.0 Strategik IR</a>
+          <a href="#penyelesaian" class="px-2.5 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition">6.0 Penyelesaian</a>
+          <a href="#kesimpulan" class="px-2.5 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition">7.0 Kesimpulan</a>
+          <a href="#rujukan" class="px-2.5 py-1.5 rounded-lg bg-emerald-600/10 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-600 hover:text-white transition">Rujukan</a>
+        </nav>
+
+        <!-- Actions: Theme Toggle & Mobile Menu Button -->
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" aria-label="Tukar Tema" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+            <!-- Sun Icon (shown in dark mode) -->
+            <svg id="sunIcon" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="5"></circle>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+            </svg>
+            <!-- Moon Icon (shown in light mode) -->
+            <svg id="moonIcon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+            </svg>
+          </button>
+
+          <button id="mobileMenuBtn" aria-label="Menu Navigasi" class="lg:hidden p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden glass-card border-b border-emerald-500/20 px-4 py-3 space-y-1 text-sm">
+      <a href="#pengenalan" class="mobile-link block px-3 py-2 rounded-lg hover:bg-emerald-500/10">1.0 Pengenalan &amp; Peralihan Tenaga Hijau</a>
+      <a href="#kegunaan" class="mobile-link block px-3 py-2 rounded-lg hover:bg-emerald-50 dark:hover:bg-slate-800">2.0 Kegunaan Utama &amp; Kepentingan REE</a>
+      <a href="#geopolitik" class="mobile-link block px-3 py-2 rounded-lg hover:bg-emerald-50 dark:hover:bg-slate-800">3.0 Permintaan Global &amp; Penguasaan China</a>
+      <a href="#malaysia" class="mobile-link block px-3 py-2 rounded-lg hover:bg-emerald-50 dark:hover:bg-slate-800">4.0 Perlombongan &amp; Kes di Malaysia</a>
+      <a href="#antarabangsa" class="mobile-link block px-3 py-2 rounded-lg hover:bg-emerald-50 dark:hover:bg-slate-800">5.0 Kepentingan Strategik Hubungan Antarabangsa</a>
+      <a href="#penyelesaian" class="mobile-link block px-3 py-2 rounded-lg hover:bg-emerald-50 dark:hover:bg-slate-800">6.0 Penyelesaian Dilema REE</a>
+      <a href="#kesimpulan" class="mobile-link block px-3 py-2 rounded-lg hover:bg-emerald-50 dark:hover:bg-slate-800">7.0 Kesimpulan</a>
+      <a href="#rujukan" class="mobile-link block px-3 py-2 rounded-lg font-semibold text-emerald-600 dark:text-emerald-400">Senarai Rujukan (APA)</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative overflow-hidden bg-gradient-to-br from-[#070d19]/95 via-emerald-950/90 to-slate-900/95 text-white py-20 sm:py-28 border-b border-emerald-500/20">
+    <!-- Decorative Background Elements -->
+    <div class="absolute inset-0 opacity-25 pointer-events-none">
+      <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-emerald-500 blur-3xl"></div>
+      <div class="absolute bottom-0 right-10 w-80 h-80 rounded-full bg-cyan-500 blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-semibold tracking-wide uppercase mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Kajian Akademik • Tenaga Hijau, Alam Sekitar &amp; Geopolitik
+        </div>
+
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-6">
+          Mineral Nadir Bumi dalam Peralihan Tenaga Hijau:<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-amber-300">
+            Dilema Kelestarian Alam Sekitar dan Kepentingan Geopolitik
+          </span>
+        </h1>
+
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-3xl mb-8">
+          Peralihan daripada bahan api fosil kepada tenaga bersih seperti solar, turbin angin, dan kenderaan elektrik bergantung sepenuhnya kepada <strong>17 unsur nadir bumi</strong>. Namun, di sebalik janji teknologi rendah karbon tersembunyi risiko pencemaran alam sekitar serta persaingan geopolitik kuasa besar dunia.
+        </p>
+
+        <div class="flex flex-wrap gap-3 sm:gap-4 mb-12">
+          <a href="#pengenalan" class="px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm shadow-lg shadow-emerald-500/25 transition flex items-center gap-2">
+            Mula Eksplorasi Kajian
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <a href="#geopolitik" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold text-sm transition">
+            Lihat Data Rantaian Bekalan (IEA)
+          </a>
+          <a href="#malaysia" class="px-6 py-3.5 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-400/30 text-amber-200 font-semibold text-sm transition">
+            Kajian Kes Malaysia (Lynas &amp; ARE)
+          </a>
+        </div>
+
+        <!-- Quick Key Metrics Strip -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-white/10">
+          <div class="p-4 rounded-2xl bg-slate-900/60 backdrop-blur-md border border-emerald-400/20">
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">17 Unsur</div>
+            <div class="text-xs text-slate-200 mt-1">15 Lantanida + Skandium (Sc) &amp; Yttrium (Y)</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-900/60 backdrop-blur-md border border-emerald-400/20">
+            <div class="text-2xl sm:text-3xl font-extrabold text-amber-400">91% – 94%</div>
+            <div class="text-xs text-slate-200 mt-1">Penguasaan penapisan &amp; magnet kekal oleh China (IEA, 2024)</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-900/60 backdrop-blur-md border border-emerald-400/20">
+            <div class="text-2xl sm:text-3xl font-extrabold text-teal-300">Deposit IAC</div>
+            <div class="text-xs text-slate-200 mt-1">Potensi sumber <em>Ion-Adsorption Clay</em> di Malaysia</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-900/60 backdrop-blur-md border border-emerald-400/20">
+            <div class="text-2xl sm:text-3xl font-extrabold text-rose-400">Dilema Hijau</div>
+            <div class="text-xs text-slate-200 mt-1">Teknologi rendah karbon vs. risiko pencemaran perlombongan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+
+    <!-- ========================================================= -->
+    <!-- SECTION 1.0: PENGENALAN & PERALIHAN TENAGA HIJAU          -->
+    <!-- ========================================================= -->
+    <section id="pengenalan" class="scroll-mt-24 fade-in-up">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Bahagian 1.0</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-1">
+            Pengenalan &amp; Peralihan Tenaga Hijau
+          </h2>
+        </div>
+        <p class="text-sm text-slate-500 dark:text-slate-400 max-w-md">
+          Rujukan utama: IPCC (2023), Forster et al. (2024), Berrich et al. (2024), Balaram (2019).
+        </p>
+      </div>
+
+      <!-- 1.0 Core Context Cards -->
+      <div class="grid lg:grid-cols-3 gap-6 mb-12">
+        <div class="p-6 rounded-2xl glass-card">
+          <div class="w-10 h-10 rounded-xl bg-rose-500/15 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold mb-4">
+            01
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-slate-50 mb-2">Krisis Perubahan Iklim</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+            Pelepasan gas rumah hijau daripada penggunaan tenaga, perindustrian, pengangkutan dan perubahan guna tanah meningkatkan pemanasan global serta cuaca ekstrem seperti gelombang haba, hujan lebat dan kemarau (IPCC, 2023; Forster et al., 2024).
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl glass-card">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold mb-4">
+            02
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-slate-50 mb-2">1.1 Peralihan kepada Tenaga Hijau</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+            Didorong oleh komitmen antarabangsa melalui <strong>Perjanjian Paris</strong>, negara-negara beralih daripada bahan api fosil kepada tenaga solar dan angin bagi menyokong pembangunan ekonomi rendah karbon (Berrich et al., 2024).
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl glass-card bg-gradient-to-br from-amber-500/10 via-transparent to-emerald-500/10 border-amber-400/30">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-700 dark:text-amber-300 flex items-center justify-center font-bold mb-4">
+            03
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-slate-50 mb-2">Paradoks "Dilema Tenaga Hijau"</h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+            Teknologi bersih memerlukan magnet berprestasi tinggi berasaskan REE. Namun, aktiviti perlombongan dan pemprosesan REE berisiko menyebabkan pencemaran serta kerosakan ekosistem, selain mencetuskan persaingan geopolitik (Balaram, 2019).
+          </p>
+        </div>
+      </div>
+
+      <!-- 1.2 Maksud Mineral Nadir Bumi (REE) + Interactive 17-Element Explorer -->
+      <div class="p-6 sm:p-8 rounded-3xl glass-card">
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-5 space-y-4">
+            <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 text-xs font-semibold">
+              Subseksyen 1.2
+            </span>
+            <h3 class="font-serif text-2xl font-bold text-slate-900 dark:text-slate-50">
+              Maksud Mineral Nadir Bumi (REE)
+            </h3>
+            <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+              REE merupakan kumpulan <strong>17 unsur kimia</strong> yang terdiri daripada <strong>15 unsur dalam siri lantanida</strong> serta dua unsur tambahan, iaitu <strong>Skandium (Sc)</strong> dan <strong>Yttrium (Y)</strong> (Balaram, 2019).
+            </p>
+            <ul class="space-y-2.5 text-sm text-slate-700 dark:text-slate-200">
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-500 font-bold mt-0.5">✓</span>
+                <span>Mempunyai <strong>sifat kimia dan fizikal yang hampir serupa</strong> serta sering ditemui bersama dalam deposit mineral semula jadi.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-500 font-bold mt-0.5">✓</span>
+                <span>Tidak semestinya jarang ditemui dalam kerak bumi, tetapi <strong>sukar diperoleh dalam kepekatan tinggi</strong> dan memerlukan pengekstrakan serta pemisahan yang kompleks.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-500 font-bold mt-0.5">✓</span>
+                <span>Memiliki <strong>sifat magnetik, optik dan katalitik yang unik</strong> untuk telefon pintar, TV, lampu LED, turbin angin dan kenderaan elektrik (EV).</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Interactive 17 Elements Grid -->
+          <div class="lg:col-span-7 glass-subcard p-5 rounded-2xl">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">
+                Jadual Interaktif 17 Unsur REE (Klik mana-mana unsur)
+              </span>
+              <div class="flex items-center gap-3 text-[11px] text-slate-700 dark:text-slate-200">
+                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-amber-500"></span> Tambahan (Sc, Y)</span>
+                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-emerald-500"></span> Siri Lantanida (15)</span>
+              </div>
+            </div>
+
+            <div id="reeElementsGrid" class="grid grid-cols-4 sm:grid-cols-6 gap-2 mb-5">
+              <!-- Populated via JS -->
+            </div>
+
+            <!-- Selected Element Detail Inspector -->
+            <div id="elementDetailCard" class="p-4 rounded-xl glass-card border-emerald-400/40">
+              <div class="flex items-center justify-between mb-1">
+                <div class="flex items-center gap-3">
+                  <span id="elSymbol" class="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">Nd</span>
+                  <div>
+                    <h4 id="elName" class="font-bold text-base text-slate-900 dark:text-slate-50">Neodymium (Nombor Atom: 60)</h4>
+                    <span id="elCategory" class="text-xs text-slate-600 dark:text-slate-300">Siri Lantanida • REE Ringan</span>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 text-xs font-semibold">Unsur Strategik</span>
+              </div>
+              <p id="elUsage" class="text-sm text-slate-700 dark:text-slate-200 mt-2 leading-relaxed">
+                Komponen utama magnet kekal berprestasi tinggi (NdFeB) yang digunakan dalam generator turbin angin, motor kenderaan elektrik (EV), telefon pintar dan sistem pertahanan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 2.0: KEGUNAAN UTAMA & KEPENTINGAN REE             -->
+    <!-- ========================================================= -->
+    <section id="kegunaan" class="scroll-mt-24 fade-in-up">
+      <div class="mb-8">
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Bahagian 2.0</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-1">
+          Kegunaan Utama &amp; Kepentingan Mineral Nadir Bumi
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 mt-2 max-w-3xl text-sm sm:text-base">
+          Sifat khusus magnetik, optik dan elektronik menjadikan REE tulang belakang kepada tiga sektor kritikal tamadun moden. Pilih sektor di bawah untuk melihat perincian teknologi dan unsur terlibat.
+        </p>
+      </div>
+
+      <!-- Sector Selector Tabs -->
+      <div class="flex flex-wrap gap-3 mb-8" role="tablist">
+        <button data-sector="elektronik" class="sector-tab active px-5 py-3 rounded-xl font-semibold text-sm transition flex items-center gap-2 bg-emerald-600 text-white shadow-md shadow-emerald-600/20">
+          <span>📱</span> 2.1 Teknologi Moden &amp; Elektronik
+        </button>
+        <button data-sector="hijau" class="sector-tab px-5 py-3 rounded-xl font-semibold text-sm transition flex items-center gap-2 glass-card text-slate-700 dark:text-slate-200 hover:border-emerald-400">
+          <span>🌿</span> 2.2 Teknologi Tenaga Hijau
+        </button>
+        <button data-sector="pertahanan" class="sector-tab px-5 py-3 rounded-xl font-semibold text-sm transition flex items-center gap-2 glass-card text-slate-700 dark:text-slate-200 hover:border-emerald-400">
+          <span>🛡️</span> 2.3 Teknologi Pertahanan &amp; Keselamatan
+        </button>
+      </div>
+
+      <!-- Sector Content Panels -->
+      <div id="sectorContentArea" class="p-6 sm:p-8 rounded-3xl glass-card">
+        <!-- Populated dynamically via JS for snappy switching -->
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 3.0: PERMINTAAN GLOBAL & PENGUASAAN CHINA         -->
+    <!-- ========================================================= -->
+    <section id="geopolitik" class="scroll-mt-24 fade-in-up">
+      <div class="mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400">Bahagian 3.0</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-1">
+          Permintaan Global &amp; Persaingan Menguasai Rantaian Bekalan REE
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 mt-2 max-w-3xl text-sm sm:text-base">
+          Peningkatan mendadak kenderaan elektrik dan turbin angin melonjakkan permintaan global, sekali gus mendedahkan risiko monopoli rantaian bekalan (IEA, 2025; IEA, 2026).
+        </p>
+      </div>
+
+      <!-- 3.1 Penguasaan China Chart + Narrative -->
+      <div class="grid lg:grid-cols-12 gap-8 mb-12">
+        <div class="lg:col-span-7 p-6 sm:p-8 rounded-3xl bg-slate-950/80 backdrop-blur-xl text-white border border-emerald-400/25 shadow-2xl">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+            <div>
+              <span class="text-xs uppercase tracking-wider text-amber-400 font-bold">Subseksyen 3.1 • Data IEA (2024 / 2026)</span>
+              <h3 class="font-serif text-2xl font-bold mt-1">Dominasi China dalam Rantaian Bekalan REE</h3>
+            </div>
+            <button id="replayChartBtn" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-medium transition">
+              ↻ Animasi Semula
+            </button>
+          </div>
+
+          <div class="space-y-6">
+            <!-- Bar 1: Mining -->
+            <div>
+              <div class="flex justify-between text-sm font-semibold mb-2">
+                <span>1. Perlombongan REE Berkaitan Magnet Dunia</span>
+                <span class="text-amber-400">China: 60% <span class="text-slate-400 font-normal">| Negara Lain: 40%</span></span>
+              </div>
+              <div class="w-full h-5 rounded-full bg-slate-800 overflow-hidden flex">
+                <div class="iea-bar bar-animate bg-gradient-to-r from-amber-500 to-rose-500 h-full flex items-center justify-end pr-2 text-[11px] font-bold text-slate-950" data-width="60%" style="width: 60%;">60%</div>
+                <div class="bg-slate-700 h-full flex-1 flex items-center justify-end pr-2 text-[11px] text-slate-300">40%</div>
+              </div>
+            </div>
+
+            <!-- Bar 2: Refining -->
+            <div>
+              <div class="flex justify-between text-sm font-semibold mb-2">
+                <span>2. Pengeluaran REE yang Telah Ditapis (Refining)</span>
+                <span class="text-amber-400">China: 91% <span class="text-slate-400 font-normal">| Negara Lain: 9%</span></span>
+              </div>
+              <div class="w-full h-5 rounded-full bg-slate-800 overflow-hidden flex">
+                <div class="iea-bar bar-animate bg-gradient-to-r from-amber-500 to-rose-500 h-full flex items-center justify-end pr-2 text-[11px] font-bold text-slate-950" data-width="91%" style="width: 91%;">91%</div>
+                <div class="bg-slate-700 h-full flex-1"></div>
+              </div>
+            </div>
+
+            <!-- Bar 3: Sintered Permanent Magnets -->
+            <div>
+              <div class="flex justify-between text-sm font-semibold mb-2">
+                <span>3. Pengeluaran Magnet Kekal Tersinter (Sintered Magnets)</span>
+                <span class="text-amber-400">China: 94% <span class="text-slate-400 font-normal">| Negara Lain: 6%</span></span>
+              </div>
+              <div class="w-full h-5 rounded-full bg-slate-800 overflow-hidden flex">
+                <div class="iea-bar bar-animate bg-gradient-to-r from-amber-500 to-rose-500 h-full flex items-center justify-end pr-2 text-[11px] font-bold text-slate-950" data-width="94%" style="width: 94%;">94%</div>
+                <div class="bg-slate-700 h-full flex-1"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-slate-800 grid sm:grid-cols-2 gap-4 text-xs text-slate-300">
+            <div class="p-3 rounded-xl bg-white/5">
+              <strong class="text-white block mb-1">Kelebihan Strategik China:</strong>
+              Infrastruktur pemprosesan maju, kepakaran teknikal tinggi, kapasiti industri berskala besar serta pengalaman pembangunan jangka panjang.
+            </div>
+            <div class="p-3 rounded-xl bg-rose-500/10 border border-rose-500/20">
+              <strong class="text-rose-300 block mb-1">Risiko Kebergantungan Global:</strong>
+              Negara yang memiliki lombong sendiri pun masih bergantung kepada China untuk menapis bahan mentah—terdedah kepada gangguan perdagangan, sekatan eksport dan ketegangan geopolitik.
+            </div>
+          </div>
+        </div>
+
+        <!-- 3.2 Usaha Negara Lain Mengurangkan Kebergantungan -->
+        <div class="lg:col-span-5 p-6 sm:p-8 rounded-3xl glass-card flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Subseksyen 3.2</span>
+            <h3 class="font-serif text-2xl font-bold text-slate-900 dark:text-slate-50 mt-1 mb-4">
+              Tindak Balas Strategik Kuasa Dunia
+            </h3>
+            <div class="space-y-4 text-sm">
+              <div class="p-4 rounded-2xl glass-subcard">
+                <div class="font-bold text-slate-900 dark:text-slate-50 flex items-center gap-2 mb-1">
+                  <span>🇺🇸</span> Amerika Syarikat (AS)
+                </div>
+                <p class="text-slate-700 dark:text-slate-200 text-xs leading-relaxed">
+                  Memperkukuh pengeluaran domestik, membina kapasiti pemprosesan tempatan dan melabur dalam projek mineral strategik bagi memenuhi keperluan teknologi tinggi serta sektor pertahanan.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-emerald-500/15 backdrop-blur-md border border-emerald-400/30">
+                <div class="font-bold text-emerald-900 dark:text-emerald-200 flex items-center gap-2 mb-1">
+                  <span>🇺🇸 + 🇦🇺</span> Rangka Kerja Kerjasama AS–Australia (Oktober 2025)
+                </div>
+                <p class="text-slate-800 dark:text-slate-100 text-xs leading-relaxed">
+                  Ditandatangani pada Oktober 2025 untuk meningkatkan bekalan mineral kritikal dan REE melalui pelaburan bersama dalam perlombongan, pemprosesan serta pempelbagaian rantaian bekalan (The White House, 2025).
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl glass-subcard">
+                <div class="font-bold text-slate-900 dark:text-slate-50 flex items-center gap-2 mb-1">
+                  <span>🇯🇵 🇰🇷 🇪🇺</span> Jepun, Korea Selatan &amp; Eropah
+                </div>
+                <p class="text-slate-700 dark:text-slate-200 text-xs leading-relaxed">
+                  Melabur dalam teknologi pemprosesan, kitar semula REE, pempelbagaian sumber import serta kerjasama antarabangsa bagi meningkatkan ketahanan ekonomi dan industri (Nugroho &amp; Yunita, 2026; IEA, 2026).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 4.0: PERLOMBONGAN & PEMPROSESAN REE DI MALAYSIA   -->
+    <!-- ========================================================= -->
+    <section id="malaysia" class="scroll-mt-24 fade-in-up">
+      <div class="mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Bahagian 4.0</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-1">
+          Aktiviti Perlombongan, Pemprosesan &amp; Kajian Kes di Malaysia
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 mt-2 max-w-3xl text-sm sm:text-base">
+          Malaysia memiliki potensi deposit <strong>Ion-Adsorption Clay (IAC)</strong> hasil luluhawa batuan granit, sedimen sungai dan formasi geologi lain (Sobri et al., 2023; 2024).
+        </p>
+      </div>
+
+      <!-- 4-Stage Pipeline Stepper -->
+      <div class="p-6 sm:p-8 rounded-3xl glass-card mb-12">
+        <h3 class="font-bold text-lg text-slate-900 dark:text-slate-50 mb-6 flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+          4 Peringkat Utama Pengeluaran &amp; Pemprosesan REE
+        </h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-5 rounded-2xl glass-subcard relative">
+            <span class="text-xs font-extrabold text-emerald-600 dark:text-emerald-400">PERINGKAT 01</span>
+            <h4 class="font-bold text-base text-slate-900 dark:text-slate-50 mt-1 mb-2">Penerokaan</h4>
+            <p class="text-xs text-slate-700 dark:text-slate-200 leading-relaxed">
+              Mengenal pasti kawasan geologi berpotensi tinggi (seperti luluhawa batuan granit &amp; deposit <em>ion-adsorption clay</em>) yang mengandungi sumber mineral REE.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl glass-subcard">
+            <span class="text-xs font-extrabold text-emerald-600 dark:text-emerald-400">PERINGKAT 02</span>
+            <h4 class="font-bold text-base text-slate-900 dark:text-slate-50 mt-1 mb-2">Penggalian / Pengekstrakan</h4>
+            <p class="text-xs text-slate-700 dark:text-slate-200 leading-relaxed">
+              Mendapatkan bahan mineral mentah daripada lapisan tanah liat atau batuan yang mengandungi unsur nadir bumi terikat.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl glass-subcard">
+            <span class="text-xs font-extrabold text-amber-600 dark:text-amber-400">PERINGKAT 03</span>
+            <h4 class="font-bold text-base text-slate-900 dark:text-slate-50 mt-1 mb-2">Pemisahan &amp; Pemulihan</h4>
+            <p class="text-xs text-slate-700 dark:text-slate-200 leading-relaxed">
+              Menggunakan kaedah <strong>hidrometalurgi</strong> seperti <em>pelindian (leaching)</em>, <em>pengekstrakan pelarut (solvent extraction)</em> dan <em>pemendakan kimia</em> (Sobri et al., 2023).
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl glass-subcard">
+            <span class="text-xs font-extrabold text-emerald-600 dark:text-emerald-400">PERINGKAT 04</span>
+            <h4 class="font-bold text-base text-slate-900 dark:text-slate-50 mt-1 mb-2">Pemprosesan Mineral</h4>
+            <p class="text-xs text-slate-700 dark:text-slate-200 leading-relaxed">
+              Menghasilkan oksida atau logam REE ketulenan tinggi yang sedia digunakan dalam industri magnet kekal dan teknologi moden.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4.1 Environmental Impacts & 4.2 Dilemma -->
+      <div class="mb-12">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">Subseksyen 4.1 &amp; 4.2</span>
+            <h3 class="font-serif text-2xl font-bold text-slate-900 dark:text-white">
+              Kesan Perlombongan terhadap Alam Sekitar &amp; Dilema Kelestarian
+            </h3>
+          </div>
+          <span class="text-xs text-slate-500 dark:text-slate-400">Kajian rujukan: Liu et al. (2019); Aziman et al. (2023)</span>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-6">
+          <!-- 4.1.1 Water Pollution -->
+          <div class="p-6 rounded-2xl glass-card border-t-4 border-t-sky-500">
+            <span class="text-xs font-bold text-sky-600 dark:text-sky-400">4.1.1 PENCEMARAN AIR</span>
+            <h4 class="font-bold text-lg text-slate-900 dark:text-slate-50 mt-1 mb-2">Pelindian Kimia &amp; Sumber Air</h4>
+            <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed mb-3">
+              Bahan kimia dan unsur mineral terlarut daripada proses pelindian boleh meresap ke air permukaan serta air bawah tanah sekiranya kawalan sisa lemah.
+            </p>
+            <div class="p-3 rounded-xl bg-sky-500/15 text-xs text-slate-800 dark:text-slate-100">
+              <strong>Bukti Empirikal:</strong> Liu et al. (2019) merekodkan kepekatan REE tinggi dalam air sungai di kawasan perlombongan <em>ion-adsorption</em> selatan China, menjejaskan ekosistem akuatik.
+            </div>
+          </div>
+
+          <!-- 4.1.2 Soil Degradation -->
+          <div class="p-6 rounded-2xl glass-card border-t-4 border-t-amber-500">
+            <span class="text-xs font-bold text-amber-600 dark:text-amber-400">4.1.2 KEMEROSOTAN KUALITI TANAH</span>
+            <h4 class="font-bold text-lg text-slate-900 dark:text-slate-50 mt-1 mb-2">Hakisan &amp; Tanah Pertanian</h4>
+            <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed mb-3">
+              Penyingkiran lapisan tanah dan pembentukan kolam sisa perlombongan meningkatkan risiko hakisan serta penyebaran bahan kimia ke kawasan sekitar.
+            </p>
+            <div class="p-3 rounded-xl bg-amber-500/15 text-xs text-slate-800 dark:text-slate-100">
+              <strong>Bukti Empirikal:</strong> Liu et al. (2019) mendapati tanah sisa dan tanah pertanian berhampiran lombong mempunyai kepekatan REE jauh lebih tinggi berbanding kawasan kawalan.
+            </div>
+          </div>
+
+          <!-- 4.1.3 Habitat & Ecosystem -->
+          <div class="p-6 rounded-2xl glass-card border-t-4 border-t-emerald-500">
+            <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">4.1.3 GANGGUAN HABITAT &amp; EKOSISTEM</span>
+            <h4 class="font-bold text-lg text-slate-900 dark:text-slate-50 mt-1 mb-2">Biodiversiti &amp; Penerimaan Sosial</h4>
+            <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed mb-3">
+              Pembukaan kawasan hutan, perubahan bentuk muka bumi dan pemusnahan vegetasi mengakibatkan kehilangan habitat hidupan liar serta pengurangan biodiversiti.
+            </p>
+            <div class="p-3 rounded-xl bg-emerald-500/15 text-xs text-slate-800 dark:text-slate-100">
+              <strong>Konteks Malaysia:</strong> Aziman et al. (2023) menegaskan kesan alam sekitar dan penerimaan masyarakat adalah cabaran utama kelestarian industri REE tempatan.
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.2 Callout Box -->
+        <div class="p-6 rounded-2xl bg-emerald-950/85 backdrop-blur-md text-emerald-50 border border-emerald-400/25 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="space-y-1.5">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-400">4.2 Dilema Pembangunan Tenaga Hijau vs. Kelestarian</span>
+            <h4 class="font-bold text-lg text-white">Teknologi bersih tidak automatik bebas pencemaran</h4>
+            <p class="text-sm text-emerald-100/90 leading-relaxed max-w-4xl">
+              Impak alam sekitar bergantung pada cara mineral diperoleh, diproses dan diuruskan. Malaysia perlu mengimbangi manfaat ekonomi dengan <strong>teknologi pemprosesan bersih, pengurusan sisa bertanggungjawab, penguatkuasaan peraturan, dan pemulihan ekosistem</strong> (Aziman et al., 2023).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4.3 Interactive Case Studies in Malaysia -->
+      <div class="p-6 sm:p-8 rounded-3xl glass-card">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Subseksyen 4.3 • Kajian Kes Domestik</span>
+            <h3 class="font-serif text-2xl font-bold text-slate-900 dark:text-slate-50 mt-1">
+              Perbandingan Pengalaman Industri REE di Malaysia
+            </h3>
+          </div>
+          <!-- Toggle View Buttons -->
+          <div class="inline-flex rounded-xl glass-subcard p-1">
+            <button id="btnCaseBoth" class="case-filter px-3.5 py-2 rounded-lg text-xs font-bold bg-emerald-600 text-white shadow-sm transition">
+              Bandingkan Kedua-dua
+            </button>
+            <button id="btnCaseLynas" class="case-filter px-3.5 py-2 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 transition">
+              4.3.1 Lynas (Gebeng)
+            </button>
+            <button id="btnCaseAre" class="case-filter px-3.5 py-2 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 transition">
+              4.3.2 ARE (Bukit Merah)
+            </button>
+          </div>
+        </div>
+
+        <div id="casesGrid" class="grid lg:grid-cols-2 gap-6">
+          <!-- 4.3.1 Lynas Malaysia -->
+          <div id="cardLynas" class="p-6 rounded-2xl glass-subcard border-emerald-400/35 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
+                  4.3.1 Operasi Semasa &amp; Rantaian Global
+                </span>
+                <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Gebeng, Pahang</span>
+              </div>
+              <h4 class="font-serif text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
+                Lynas Malaysia Sdn. Bhd.
+              </h4>
+              <ul class="space-y-2.5 text-sm text-slate-700 dark:text-slate-200">
+                <li><strong>Sumber Bahan Mentah:</strong> Memproses pekatan mineral daripada lombong <em>Mount Weld, Australia</em>, menjadikan Malaysia pemain penting dalam pemisahan REE antarabangsa.</li>
+                <li><strong>Isu Utama Pengurusan Sisa:</strong> Perbincangan tertumpu kepada residu <em>Water Leach Purification (WLP)</em> yang mengandungi unsur radioaktif semula jadi seperti <strong>thorium</strong>.</li>
+                <li><strong>Aspek Kawal Selia:</strong> Melibatkan keselamatan penyimpanan sisa jangka panjang, keperluan fasiliti pelupusan kekal (PDF) dan pemantauan ketat operasi kilang (Parlimen Malaysia, 2024).</li>
+              </ul>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-200/60 dark:border-slate-700/60 text-xs text-emerald-700 dark:text-emerald-300 font-medium">
+              <strong>Pengajaran Utama:</strong> Memberi manfaat ekonomi &amp; strategik kepada Malaysia, tetapi wajib disertai pematuhan keselamatan sisa dan pemantauan alam sekitar yang telus.
+            </div>
+          </div>
+
+          <!-- 4.3.2 Asian Rare Earth (ARE) -->
+          <div id="cardAre" class="p-6 rounded-2xl glass-subcard border-rose-400/35 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full bg-rose-500/15 text-rose-700 dark:text-rose-300 text-xs font-bold">
+                  4.3.2 Sejarah Konflik &amp; Penutupan (1982–1994)
+                </span>
+                <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Bukit Merah, Perak</span>
+              </div>
+              <h4 class="font-serif text-xl font-bold text-slate-900 dark:text-slate-50 mb-3">
+                Asian Rare Earth (ARE)
+              </h4>
+              <ul class="space-y-2.5 text-sm text-slate-700 dark:text-slate-200">
+                <li><strong>Operasi &amp; Sisa:</strong> Mula beroperasi pada <strong>1982</strong> bagi mengekstrak <em>yttrium</em> daripada mineral <em>monazite</em>, menghasilkan sisa mengandungi <strong>thorium radioaktif</strong> (Ichihara &amp; Harding, 1995).</li>
+                <li><strong>Reaksi Masyarakat:</strong> Kebimbangan terhadap pencemaran radioaktif dan lokasi penyimpanan sisa mencetuskan bantahan penduduk serta tindakan undang-undang berprofil tinggi.</li>
+                <li><strong>Penutupan Kilang:</strong> ARE akhirnya menghentikan operasinya pada tahun <strong>1994</strong> akibat tekanan awam dan isu keselamatan alam sekitar.</li>
+              </ul>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-200/60 dark:border-slate-700/60 text-xs text-rose-700 dark:text-rose-300 font-medium">
+              <strong>Pengajaran Utama:</strong> Pembangunan industri tanpa ketelusan maklumat, pengurusan sisa meyakinkan dan penglibatan masyarakat akan mencetuskan konflik sosial-undang-undang.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 5.0: KEPENTINGAN STRATEGIK HUBUNGAN ANTARABANGSA  -->
+    <!-- ========================================================= -->
+    <section id="antarabangsa" class="scroll-mt-24 fade-in-up">
+      <div class="mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Bahagian 5.0</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-1">
+          Kepentingan Strategik REE dalam Hubungan Antarabangsa
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 mt-2 max-w-3xl text-sm sm:text-base">
+          REE bukan lagi sekadar komoditi dagangan biasa, sebaliknya menjadi instrumen kuasa geopolitik, keselamatan ekonomi dan kedaulatan ketenteraan (Kilinc &amp; Xavier, 2026; IEA, 2026).
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-6">
+        <!-- 5.1 Economic Security -->
+        <div class="p-6 sm:p-7 rounded-3xl glass-card flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-2xl bg-amber-500/15 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mb-4">
+              📈
+            </div>
+            <span class="text-xs font-bold text-amber-600 dark:text-amber-400">SUBSEKSYEN 5.1</span>
+            <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-slate-50 mt-1 mb-3">
+              Keselamatan Ekonomi &amp; Rantaian Bekalan
+            </h3>
+            <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed mb-4">
+              Gangguan bekalan REE boleh melumpuhkan pengeluaran industri automotif, elektronik dan tenaga hijau serta melonjakkan kos pembuatan.
+            </p>
+            <div class="p-4 rounded-2xl bg-amber-500/15 border border-amber-400/25 text-xs text-slate-800 dark:text-slate-100 leading-relaxed">
+              <strong>Kajian Kes Sekatan Eksport 2025:</strong> Sekatan eksport REE oleh China pada tahun 2025 menyebabkan beberapa pengeluar automotif sukar memperoleh magnet kekal sehingga terpaksa mengurangkan atau menghentikan pengeluaran sementara (IEA, 2026).
+            </div>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-200/60 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-300">
+            Langkah mitigasi: Kepelbagaian sumber, kapasiti pemprosesan domestik &amp; simpanan stok strategik.
+          </div>
+        </div>
+
+        <!-- 5.2 National Security & Defense -->
+        <div class="p-6 sm:p-7 rounded-3xl glass-card flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-2xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-4">
+              ✈️
+            </div>
+            <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">SUBSEKSYEN 5.2</span>
+            <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-slate-50 mt-1 mb-3">
+              Keselamatan Negara &amp; Teknologi Pertahanan
+            </h3>
+            <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed mb-4">
+              Sifat magnetik, optik dan elektronik REE sangat kritikal bagi sistem radar, sonar, sensor, komunikasi, peluru berpandu berpandu tepat dan pesawat pejuang (Setiawan et al., 2023).
+            </p>
+            <div class="p-4 rounded-2xl bg-emerald-500/15 border border-emerald-400/25 text-xs text-slate-800 dark:text-slate-100 leading-relaxed">
+              <strong>Aplikasi Pesawat Pejuang F-35 Lightning II:</strong> Menggunakan magnet <em>neodymium</em> dan <em>samarium</em> dalam motor kawalan, sistem elektronik, sensor serta radar berprestasi tinggi. Gangguan bekalan mengancam kesiapsiagaan pertahanan.
+            </div>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-200/60 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-300">
+            Impak: Akses REE menjadi isu kedaulatan dan keupayaan ketenteraan negara.
+          </div>
+        </div>
+
+        <!-- 5.3 US-China Geopolitical Rivalry -->
+        <div class="p-6 sm:p-7 rounded-3xl glass-card flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-2xl bg-rose-500/15 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl mb-4">
+              🌐
+            </div>
+            <span class="text-xs font-bold text-rose-600 dark:text-rose-400">SUBSEKSYEN 5.3</span>
+            <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-slate-50 mt-1 mb-3">
+              Persaingan Geopolitik Amerika Syarikat–China
+            </h3>
+            <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed mb-4">
+              Penguasaan China dalam pemprosesan dan magnet kekal memberi kelebihan tawar-menawar geopolitik, manakala kebergantungan AS mencetuskan kebimbangan keselamatan nasional.
+            </p>
+            <div class="p-4 rounded-2xl bg-rose-500/15 border border-rose-400/25 text-xs text-slate-800 dark:text-slate-100 leading-relaxed">
+              <strong>Dasar Perdagangan sebagai Instrumen Kuasa:</strong> Kawalan eksport REE digunakan sebagai alat tekanan ketika ketegangan perdagangan-teknologi, mendorong AS membentuk pakatan rantaian bekalan bersama negara sekutu.
+            </div>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-200/60 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-300">
+            Impak: REE membentuk semula pakatan strategik dan dasar luar kuasa besar.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 6.0: PENYELESAIAN DILEMA MINERAL NADIR BUMI       -->
+    <!-- ========================================================= -->
+    <section id="penyelesaian" class="scroll-mt-24 fade-in-up">
+      <div class="mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Bahagian 6.0</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-1">
+          Pendekatan Penyelesaian Dilema Mineral Nadir Bumi
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 mt-2 max-w-3xl text-sm sm:text-base">
+          Oleh sebab REE tidak dapat dielakkan dalam teknologi bersih dan pertahanan, penyelesaian holistik diperlukan untuk mengimbangi bekalan strategik dengan perlindungan alam sekitar (IEA, 2026).
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- 6.1 Recycling -->
+        <div class="p-6 sm:p-7 rounded-3xl glass-card hover:border-emerald-400/50 transition">
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-3 py-1 rounded-lg bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 text-xs font-bold">6.1 Kitar Semula REE</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400">Yang et al., 2017; Torta et al., 2024</span>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-slate-50 mb-2">
+            Pemulihan Magnet Kekal NdFeB daripada Produk Tamat Tempoh
+          </h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed mb-3">
+            Mengumpul dan mengekstrak semula neodymium serta praseodymium daripada sisa elektronik, motor kenderaan elektrik (EV) dan turbin angin bagi membekalkan sumber REE sekunder.
+          </p>
+          <div class="p-3.5 rounded-xl glass-subcard text-xs text-slate-700 dark:text-slate-200">
+            <strong>Cabaran &amp; Hala Tuju:</strong> Kesukaran pengumpulan sisa elektronik, kos pemisahan dan keperluan teknologi pemulihan cekap memerlukan pelaburan R&amp;D dan sistem pengumpulan bersepadu.
+          </div>
+        </div>
+
+        <!-- 6.2 Alternative Tech -->
+        <div class="p-6 sm:p-7 rounded-3xl glass-card hover:border-emerald-400/50 transition">
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-3 py-1 rounded-lg bg-amber-500/15 text-amber-700 dark:text-amber-300 text-xs font-bold">6.2 Teknologi Alternatif</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400">IEA, 2026</span>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-slate-50 mb-2">
+            Magnet Ferit, AlNiCo &amp; Reka Bentuk Motor Tanpa REE
+          </h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed mb-3">
+            Mengurangkan kuantiti REE melalui kecekapan reka bentuk motor/penyejukan atau menggantikannya dengan <strong>magnet ferit</strong>, <strong>aluminium-nikel-kobalt (AlNiCo)</strong> serta motor elektrik bebas magnet kekal.
+          </p>
+          <div class="p-3.5 rounded-xl glass-subcard text-xs text-slate-700 dark:text-slate-200">
+            <strong>Cabaran &amp; Hala Tuju:</strong> Kekuatan magnet bahan alternatif masih lebih rendah berbanding magnet REE di samping kekangan kos dan ketahanan komersial.
+          </div>
+        </div>
+
+        <!-- 6.3 International Cooperation -->
+        <div class="p-6 sm:p-7 rounded-3xl glass-card hover:border-emerald-400/50 transition">
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-3 py-1 rounded-lg bg-sky-500/15 text-sky-700 dark:text-sky-300 text-xs font-bold">6.3 Kerjasama Antarabangsa</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400">Projek Caremag &amp; G7</span>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-slate-50 mb-2">
+            Perkongsian Teknologi, Modal &amp; Rantaian Bekalan Pelbagai
+          </h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed mb-3">
+            Contoh utama ialah <strong>Projek Caremag (Jepun–Perancis)</strong> di mana <em>JOGMEC</em> dan <em>Iwatani</em> melabur dalam pemprosesan magnet terpakai serta bahan mentah di Perancis untuk menghasilkan oksida REE, selain penyelarasan melalui forum <strong>G7</strong>.
+          </p>
+          <div class="p-3.5 rounded-xl glass-subcard text-xs text-slate-700 dark:text-slate-200">
+            <strong>Manfaat Bersama:</strong> Mengurangkan risiko monopoli satu pembekal serta berkongsi teknologi pemprosesan yang lebih bersih.
+          </div>
+        </div>
+
+        <!-- 6.4 Sustainable Mining & SOP NR-REE -->
+        <div class="p-6 sm:p-7 rounded-3xl glass-card hover:border-emerald-400/50 transition">
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-3 py-1 rounded-lg bg-teal-500/15 text-teal-700 dark:text-teal-300 text-xs font-bold">6.4 Perlombongan Mampan</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400">KeTSA, 2022</span>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-slate-50 mb-2">
+            Pematuhan EIA &amp; SOP NR-REE Malaysia
+          </h3>
+          <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed mb-3">
+            Melaksanakan Penilaian Impak Alam Sekitar (EIA), kawalan sisa kimia, pemantauan air/tanah dan pemulihan bekas lombong secara menyeluruh.
+          </p>
+          <div class="p-3.5 rounded-xl bg-emerald-500/15 border border-emerald-400/25 text-xs text-slate-800 dark:text-slate-100">
+            <strong>Garis Panduan Malaysia:</strong> Pematuhan kepada <em>Standard Operating Procedure (SOP) Non-Radioactive Rare Earth Elements (NR-REE)</em> oleh Kementerian Tenaga dan Sumber Asli (KeTSA, 2022).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 7.0: KESIMPULAN                                   -->
+    <!-- ========================================================= -->
+    <section id="kesimpulan" class="scroll-mt-24 fade-in-up">
+      <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-emerald-950/90 via-slate-900/90 to-[#070d19]/95 backdrop-blur-xl text-white border border-emerald-400/30 shadow-2xl relative overflow-hidden">
+        <div class="relative z-10 max-w-4xl space-y-5">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider">
+            Bahagian 7.0 • Rumusan Sintesis
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold leading-tight">
+            Kesimpulan: Menyeimbangkan Transisi Hijau, Geopolitik &amp; Kelestarian Bumi
+          </h2>
+          <p class="text-slate-200 text-base leading-relaxed">
+            Mineral Nadir Bumi (REE) merupakan sumber mineral strategik yang menjadi tunjang kepada peralihan tenaga hijau, kemajuan teknologi moden dan keupayaan pertahanan negara. Namun, kebergantungan rantaian bekalan yang tertumpu serta impak pencemaran perlombongan mewujudkan dilema global yang memerlukan tadbir urus bijaksana.
+          </p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Peralihan kepada tenaga bersih tidak seharusnya dinilai pada peringkat penggunaan teknologi mesra alam semata-mata, tetapi merangkumi keseluruhan rantaian bekalan mineralnya. Melalui gabungan <strong>kitar semula REE, inovasi teknologi alternatif, kerjasama antarabangsa, serta pematuhan perlombongan mampan (seperti SOP NR-REE)</strong>, pembangunan teknologi hijau dapat dijayakan tanpa mengorbankan kelestarian alam sekitar dan kesejahteraan masyarakat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SECTION 8.0: SENARAI RUJUKAN (APA FORMAT + SEARCH)        -->
+    <!-- ========================================================= -->
+    <section id="rujukan" class="scroll-mt-24 fade-in-up">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Bibliografi Akademik</span>
+          <h2 class="font-serif text-3xl font-bold text-slate-900 dark:text-white mt-1">
+            Senarai Rujukan (Format APA)
+          </h2>
+        </div>
+
+        <!-- Search & Copy References -->
+        <div class="flex flex-wrap items-center gap-2">
+          <input
+            type="text"
+            id="refSearchInput"
+            placeholder="Cari pengarang, tahun atau tajuk..."
+            class="px-4 py-2.5 rounded-xl glass-card text-sm text-slate-900 dark:text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 w-64"
+          />
+          <button id="copyRefsBtn" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition shadow-sm">
+            Salin Semua Rujukan
+          </button>
+        </div>
+      </div>
+
+      <!-- Toast Message Box (No alert()) -->
+      <div id="toastMsg" class="hidden mb-4 px-4 py-3 rounded-xl bg-emerald-600 text-white text-xs font-semibold shadow-md">
+        Semua rujukan berjaya disalin ke papan keratan (clipboard)!
+      </div>
+
+      <div class="p-6 sm:p-8 rounded-3xl glass-card">
+        <div id="referencesList" class="space-y-4 text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
+          <!-- Populated dynamically from complete citation dataset -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-emerald-500/20 bg-white/75 dark:bg-[#070d19]/85 backdrop-blur-md py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600 dark:text-slate-400">
+      <div>
+        <strong class="text-slate-900 dark:text-slate-100">Mineral Nadir Bumi dalam Peralihan Tenaga Hijau: Dilema Kelestarian Alam Sekitar dan Kepentingan Geopolitik</strong>
+        <p class="mt-0.5">Portal Rujukan Akademik Interaktif • Semua Hak Terpelihara</p>
+      </div>
+      <a href="#hero" class="px-4 py-2 rounded-lg glass-card hover:bg-emerald-500 hover:text-white transition font-semibold">
+        ↑ Kembali ke Atas
+      </a>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Dark/Light Mode Toggle
+      const themeToggle = document.getElementById('themeToggle');
+      const htmlEl = document.documentElement;
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        htmlEl.classList.add('dark');
+      }
+      themeToggle.addEventListener('click', () => {
+        htmlEl.classList.toggle('dark');
+      });
+
+      // 2. Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+
+      // 3. Reading Progress Bar & Intersection Observer for Fade-In Animations
+      const readingProgress = document.getElementById('readingProgress');
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        readingProgress.style.width = `${pct}%`;
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+      // 4. Interactive 17 REE Elements Explorer (Section 1.2)
+      const reeElements = [
+        { sym: 'Sc', num: 21, name: 'Scandium', group: 'Unsur Tambahan (Bukan Lantanida)', usage: 'Aloi aluminium ringan berketahanan tinggi untuk komponen aeroangkasa, pesawat pejuang dan teknologi sel bahan api.' },
+        { sym: 'Y', num: 39, name: 'Yttrium', group: 'Unsur Tambahan (Bukan Lantanida)', usage: 'Digunakan dalam fosfor lampu LED, paparan televisyen, laser, seramik berprestasi tinggi serta diekstrak daripada monazite (seperti kes ARE Bukit Merah).' },
+        { sym: 'La', num: 57, name: 'Lanthanum', group: 'Siri Lantanida', usage: 'Digunakan dalam kanta optik ketepatan tinggi, bateri kenderaan hibrid (NiMH) dan pemangkin penapisan petroleum.' },
+        { sym: 'Ce', num: 58, name: 'Cerium', group: 'Siri Lantanida', usage: 'Penukar bermangkin (catalytic converters) kenderaan, penggilap kaca optik dan penstabil dalam teknologi tenaga bersih.' },
+        { sym: 'Pr', num: 59, name: 'Praseodymium', group: 'Siri Lantanida', usage: 'Unsur penting bersama Neodymium untuk menghasilkan magnet kekal berprestasi tinggi dalam motor kenderaan elektrik (EV) dan turbin angin.' },
+        { sym: 'Nd', num: 60, name: 'Neodymium', group: 'Siri Lantanida', usage: 'Komponen utama magnet kekal NdFeB yang sangat kuat untuk generator turbin angin, motor EV, pembesar suara telefon pintar dan sistem pertahanan.' },
+        { sym: 'Pm', num: 61, name: 'Promethium', group: 'Siri Lantanida', usage: 'Unsur radioaktif semula jadi yang jarang; digunakan dalam bateri nuklear khusus dan penyelidikan saintifik.' },
+        { sym: 'Sm', num: 62, name: 'Samarium', group: 'Siri Lantanida', usage: 'Digunakan dalam magnet Samarium-Kobalt (SmCo) yang tahan suhu ekstrem bagi sistem panduan peluru berpandu dan pesawat pejuang F-35.' },
+        { sym: 'Eu', num: 63, name: 'Europium', group: 'Siri Lantanida', usage: 'Fosfor merah dan biru dalam skrin televisyen, komputer, telefon pintar serta lampu LED cekap tenaga.' },
+        { sym: 'Gd', num: 64, name: 'Gadolinium', group: 'Siri Lantanida', usage: 'Agen kontras pengimejan perubatan (MRI), komponen magnetik dan perisai reaktor nuklear.' },
+        { sym: 'Tb', num: 65, name: 'Terbium', group: 'Siri Lantanida', usage: 'Meningkatkan kestabilan suhu magnet kekal dalam turbin angin dan motor EV serta digunakan dalam fosfor hijau paparan elektronik.' },
+        { sym: 'Dy', num: 66, name: 'Dysprosium', group: 'Siri Lantanida', usage: 'Sangat kritikal untuk mengekalkan kekuatan magnet kekal NdFeB pada suhu operasi tinggi dalam motor kenderaan elektrik dan turbin angin.' },
+        { sym: 'Ho', num: 67, name: 'Holmium', group: 'Siri Lantanida', usage: 'Mempunyai kekuatan magnetik tertinggi antara semua unsur; digunakan dalam magnet khusus dan laser perubatan.' },
+        { sym: 'Er', num: 68, name: 'Erbium', group: 'Siri Lantanida', usage: 'Penguat isyarat dalam kabel gentian optik (fiber optic) bagi teknologi komunikasi berkelajuan tinggi.' },
+        { sym: 'Tm', num: 69, name: 'Thulium', group: 'Siri Lantanida', usage: 'Sumber sinaran dalam peralatan sinar-X mudah alih dan laser berketepatan tinggi.' },
+        { sym: 'Yb', num: 70, name: 'Ytterbium', group: 'Siri Lantanida', usage: 'Digunakan dalam laser gentian perindustrian, jam atom berketepatan tinggi dan sel solar khusus.' },
+        { sym: 'Lu', num: 71, name: 'Lutetium', group: 'Siri Lantanida', usage: 'Pengesan dalam pengimbas perubatan PET dan pemangkin penapisan hidrokarbon.' }
+      ];
+
+      const gridEl = document.getElementById('reeElementsGrid');
+      const elSymbol = document.getElementById('elSymbol');
+      const elName = document.getElementById('elName');
+      const elCategory = document.getElementById('elCategory');
+      const elUsage = document.getElementById('elUsage');
+
+      reeElements.forEach((el, idx) => {
+        const isExtra = el.sym === 'Sc' || el.sym === 'Y';
+        const btn = document.createElement('button');
+        btn.className = `element-tile p-2.5 rounded-xl border text-left flex flex-col justify-between ${
+          isExtra
+            ? 'bg-amber-500/10 border-amber-500/40 hover:bg-amber-500/20'
+            : 'bg-emerald-500/10 border-emerald-500/30 hover:bg-emerald-500/20'
+        } ${el.sym === 'Nd' ? 'ring-2 ring-emerald-500' : ''}`;
+        btn.innerHTML = `
+          <span class="text-[10px] font-semibold text-slate-500 dark:text-slate-400">${el.num}</span>
+          <span class="text-base font-extrabold ${isExtra ? 'text-amber-600 dark:text-amber-400' : 'text-emerald-700 dark:text-emerald-300'}">${el.sym}</span>
+          <span class="text-[10px] truncate text-slate-700 dark:text-slate-300 font-medium">${el.name}</span>
+        `;
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.element-tile').forEach(t => t.classList.remove('ring-2', 'ring-emerald-500'));
+          btn.classList.add('ring-2', 'ring-emerald-500');
+          elSymbol.textContent = el.sym;
+          elName.textContent = `${el.name} (Nombor Atom: ${el.num})`;
+          elCategory.textContent = el.group;
+          elUsage.textContent = el.usage;
+        });
+        gridEl.appendChild(btn);
+      });
+
+      // 5. Interactive Sector Tabs (Section 2.0)
+      const sectorData = {
+        elektronik: {
+          badge: 'Subseksyen 2.1 • Balaram (2019)',
+          title: 'Teknologi Moden & Peralatan Elektronik',
+          desc: 'Sifat magnetik, optik dan elektronik unik REE membolehkan komponen peranti moden dihasilkan dalam saiz yang lebih kecil, ringan, cekap tenaga dan berprestasi tinggi.',
+          items: [
+            { name: 'Telefon Pintar', detail: 'Skrin paparan berwarna, pembesar suara mini, motor getaran dan litar pemprosesan.' },
+            { name: 'Televisyen & Komputer', detail: 'Fosfor paparan resolusi tinggi serta komponen storan dan pemacu cakera.' },
+            { name: 'Lampu LED', detail: 'Penghasilan cahaya cekap tenaga menggunakan unsur seperti Yttrium dan Europium.' },
+            { name: 'Teknologi Komunikasi', detail: 'Penguat gentian optik (Erbium) dan komponen pemancar isyarat tanpa wayar.' }
+          ],
+          elements: ['Yttrium (Y)', 'Europium (Eu)', 'Erbium (Er)', 'Neodymium (Nd)', 'Lanthanum (La)']
+        },
+        hijau: {
+          badge: 'Subseksyen 2.2 • Balaram (2019); European Commission (2021)',
+          title: 'Teknologi Tenaga Hijau & Mobiliti Rendah Karbon',
+          desc: 'REE merupakan bahan teras dalam penghasilan magnet kekal berprestasi tinggi yang membolehkan sistem tenaga bersih beroperasi dengan kecekapan maksimum.',
+          items: [
+            { name: 'Generator Turbin Angin', detail: 'Mengurangkan keperluan kotak gear mekanikal yang berat dan meningkatkan kecekapan penjanaan elektrik.' },
+            { name: 'Motor Kenderaan Elektrik (EV)', detail: 'Menghasilkan tork tinggi dalam motor kompak serta meningkatkan jarak pemanduan bateri.' },
+            { name: 'Kestabilan Suhu Tinggi', detail: 'Penambahan Dysprosium dan Terbium memastikan magnet tidak kehilangan kuasa pada suhu operasi ekstrem.' },
+            { name: 'Peralihan Sistem Tenaga Bersih', detail: 'Menyokong sasaran penyahkarbonan global di bawah Perjanjian Paris.' }
+          ],
+          elements: ['Neodymium (Nd)', 'Praseodymium (Pr)', 'Dysprosium (Dy)', 'Terbium (Tb)']
+        },
+        pertahanan: {
+          badge: 'Subseksyen 2.3 • Setiawan et al. (2023)',
+          title: 'Teknologi Pertahanan & Keselamatan Negara',
+          desc: 'Kepentingan REE dalam pembuatan sistem persenjataan berketepatan tinggi menjadikan kestabilan bekalan mineral ini berkait langsung dengan keselamatan dan kedaulatan negara.',
+          items: [
+            { name: 'Pesawat Pejuang F-35 Lightning II', detail: 'Digunakan dalam sistem elektronik, sensor canggih, radar serta komponen kawalan penerbangan.' },
+            { name: 'Teknologi Panduan Peluru Berpandu', detail: 'Magnet Samarium dan Neodymium mengawal sirip panduan ketepatan tinggi dalam keadaan ekstrem.' },
+            { name: 'Sistem Radar & Sonar', detail: 'Pengesanan sasaran jarak jauh dengan ketepatan isyarat optik dan magnetik.' },
+            { name: 'Komunikasi & Pengawasan Ketenteraan', detail: 'Peralatan komunikasi medan tempur dan penglihatan malam berprestasi tinggi.' }
+          ],
+          elements: ['Neodymium (Nd)', 'Samarium (Sm)', 'Yttrium (Y)', 'Scandium (Sc)']
+        }
+      };
+
+      const sectorContentArea = document.getElementById('sectorContentArea');
+      function renderSector(key) {
+        const data = sectorData[key];
+        sectorContentArea.innerHTML = `
+          <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 space-y-4">
+              <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 text-xs font-bold">${data.badge}</span>
+              <h3 class="font-serif text-2xl font-bold text-slate-900 dark:text-slate-50">${data.title}</h3>
+              <p class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">${data.desc}</p>
+              <div class="pt-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 block mb-2">Unsur Utama Terlibat:</span>
+                <div class="flex flex-wrap gap-2">
+                  ${data.elements.map(e => `<span class="px-3 py-1 rounded-lg bg-amber-500/15 text-amber-800 dark:text-amber-300 text-xs font-semibold">${e}</span>`).join('')}
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+              ${data.items.map(item => `
+                <div class="p-4 rounded-2xl glass-subcard">
+                  <h4 class="font-bold text-sm text-slate-900 dark:text-slate-50 mb-1.5">${item.name}</h4>
+                  <p class="text-xs text-slate-700 dark:text-slate-200 leading-relaxed">${item.detail}</p>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+      renderSector('elektronik');
+
+      document.querySelectorAll('.sector-tab').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.sector-tab').forEach(b => {
+            b.className = 'sector-tab px-5 py-3 rounded-xl font-semibold text-sm transition flex items-center gap-2 glass-card text-slate-700 dark:text-slate-200 hover:border-emerald-400';
+          });
+          btn.className = 'sector-tab active px-5 py-3 rounded-xl font-semibold text-sm transition flex items-center gap-2 bg-emerald-600 text-white shadow-md shadow-emerald-600/20';
+          renderSector(btn.dataset.sector);
+        });
+      });
+
+      // 6. Replay IEA Chart Animation (Section 3.1)
+      const replayChartBtn = document.getElementById('replayChartBtn');
+      replayChartBtn.addEventListener('click', () => {
+        document.querySelectorAll('.iea-bar').forEach(bar => {
+          const target = bar.dataset.width;
+          bar.style.width = '5%';
+          setTimeout(() => {
+            bar.style.width = target;
+          }, 120);
+        });
+      });
+
+      // 7. Malaysian Case Studies Toggle (Section 4.3)
+      const btnCaseBoth = document.getElementById('btnCaseBoth');
+      const btnCaseLynas = document.getElementById('btnCaseLynas');
+      const btnCaseAre = document.getElementById('btnCaseAre');
+      const cardLynas = document.getElementById('cardLynas');
+      const cardAre = document.getElementById('cardAre');
+      const casesGrid = document.getElementById('casesGrid');
+
+      function setCaseFilter(mode, activeBtn) {
+        document.querySelectorAll('.case-filter').forEach(b => {
+          b.className = 'case-filter px-3.5 py-2 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 transition';
+        });
+        activeBtn.className = 'case-filter px-3.5 py-2 rounded-lg text-xs font-bold bg-emerald-600 text-white shadow-sm transition';
+
+        if (mode === 'both') {
+          casesGrid.className = 'grid lg:grid-cols-2 gap-6';
+          cardLynas.classList.remove('hidden');
+          cardAre.classList.remove('hidden');
+        } else if (mode === 'lynas') {
+          casesGrid.className = 'grid grid-cols-1 gap-6';
+          cardLynas.classList.remove('hidden');
+          cardAre.classList.add('hidden');
+        } else {
+          casesGrid.className = 'grid grid-cols-1 gap-6';
+          cardLynas.classList.add('hidden');
+          cardAre.classList.remove('hidden');
+        }
+      }
+      btnCaseBoth.addEventListener('click', () => setCaseFilter('both', btnCaseBoth));
+      btnCaseLynas.addEventListener('click', () => setCaseFilter('lynas', btnCaseLynas));
+      btnCaseAre.addEventListener('click', () => setCaseFilter('are', btnCaseAre));
+
+      // 8. Complete APA References List + Search + Copy
+      const references = [
+        {
+          text: 'Aziman, E. S., Ismail, A. F., & Rahmat, M. A. (2023). Balancing economic growth and environmental protection: A sustainable approach to Malaysia\'s rare-earth industry. Resources Policy, 83, 103753.',
+          url: 'https://doi.org/10.1016/j.resourpol.2023.103753'
+        },
+        {
+          text: 'Balaram, V. (2019). Rare earth elements: A review of applications, occurrence, exploration, analysis, recycling, and environmental impact. Geoscience Frontiers, 10(4), 1285–1303.',
+          url: 'https://doi.org/10.1016/j.gsf.2018.12.005'
+        },
+        {
+          text: 'Berrich, O., Mafakheri, F., & Dabbou, H. (2024). Renewable energy transition and the Paris Agreement: How governance quality makes a difference? Energies, 17(17), 4238.',
+          url: 'https://doi.org/10.3390/en17174238'
+        },
+        {
+          text: 'Forster, P. M., Smith, C., Walsh, T., Lamb, W. F., Lamboll, R., Hall, B., Hauser, M., et al. (2024). Indicators of global climate change 2023: Annual update of key indicators of the state of the climate system and human influence. Earth System Science Data, 16(6), 2625–2658.',
+          url: 'https://doi.org/10.5194/essd-16-2625-2024'
+        },
+        {
+          text: 'Ichihara, M., & Harding, A. (1995). Human rights, the environment and radioactive waste: A study of the Asian Rare Earth case in Malaysia. Review of European Community & International Environmental Law, 4(1), 1–14.',
+          url: 'https://doi.org/10.1111/j.1467-9388.1995.tb00190.x'
+        },
+        {
+          text: 'Intergovernmental Panel on Climate Change. (2023). Climate change 2023: Synthesis report.',
+          url: 'https://doi.org/10.59327/IPCC/AR6-9789291691647'
+        },
+        {
+          text: 'International Energy Agency. (2025). Global critical minerals outlook 2025.',
+          url: 'https://www.iea.org/reports/global-critical-minerals-outlook-2025'
+        },
+        {
+          text: 'International Energy Agency. (2026). Global critical minerals outlook 2026.',
+          url: 'https://www.iea.org/reports/global-critical-minerals-outlook-2026'
+        },
+        {
+          text: 'International Energy Agency. (2026). Rare earth elements: Pathways to secure and diversified supply chains.',
+          url: 'https://www.iea.org/reports/rare-earth-elements'
+        },
+        {
+          text: 'Kementerian Tenaga dan Sumber Asli. (2022). Standard operating procedure (SOP) non-radioactive rare earth elements (NR-REE).',
+          url: 'https://repoemc.ukm.my/handle/123456789/1047'
+        },
+        {
+          text: 'Kilinc, N., & Xavier, B. (2026). Rare earth elements as strategic catalysts in the global energy transition: Market dynamics, import dependence, and geopolitical implications. Mineral Economics.',
+          url: 'https://doi.org/10.1007/s13563-026-00662-7'
+        },
+        {
+          text: 'Liu, W.-S., Guo, M.-N., Liu, C., Yuan, M., Chen, X.-T., Huot, H., Zhao, C.-M., Tang, Y.-T., Morel, J. L., & Qiu, R.-L. (2019). Water, sediment and agricultural soil contamination from an ion-adsorption rare earth mining area. Chemosphere, 216, 75–83.',
+          url: 'https://doi.org/10.1016/j.chemosphere.2018.10.109'
+        },
+        {
+          text: 'Nugroho, Y. A., & Yunita, P. (2026). Japan’s geoeconomic strategy to secure the supply of rare earth elements. Bulletin of Social Studies and Community Development, 5(3), 327–344.',
+          url: 'https://doi.org/10.61436/bsscd/v5i3.pp327-344'
+        },
+        {
+          text: 'Parlimen Malaysia. (2024). Taklimat mengenai permit yang dikeluarkan kepada Lynas Malaysia dan isu-isu berbangkit.',
+          url: 'https://www.parlimen.gov.my/ipms/eps/2024-03-26/DR.13.2024%20-%20DR13.2024.pdf'
+        },
+        {
+          text: 'Setiawan, R., Aritonang, S., Andreas N, R. D., & Juhana, R. (2023). Penerapan unsur tanah jarang pada struktur rangka persenjataan militer (Kasus struktur rangka F-35 Lightning II). Jurnal Rekayasa Material, Manufaktur dan Energi, 6(1), 8–17.',
+          url: 'https://doi.org/10.30596/rmme.v6i1.12627'
+        },
+        {
+          text: 'Sobri, N. A., Yunus, M. Y. B. M., & Harun, N. (2023). A review of ion adsorption clay as a high potential source of rare earth minerals in Malaysia. Materials Today: Proceedings.',
+          url: 'https://doi.org/10.1016/j.matpr.2023.03.513'
+        },
+        {
+          text: 'Switzer, S., Gerber, L., & Sindico, F. (2015). Access to minerals: WTO export restrictions and climate change considerations. Laws, 4(3), 617–637.',
+          url: ''
+        },
+        {
+          text: 'Torta, G., Ciacci, L., Vassura, I., & Passarini, F. (2024). Exploring mass and economic potentials of rare earth elements recycling from electric vehicles at end-of-life. Mineral Economics, 37, 573–587.',
+          url: 'https://doi.org/10.1007/s13563-024-00433-2'
+        },
+        {
+          text: 'The White House. (2025, October 20). United States-Australia framework for securing of supply in the mining and processing of critical minerals and rare earths.',
+          url: 'https://www.whitehouse.gov/briefings-statements/2025/10/united-states-australia-framework-for-securing-of-supply-in-the-mining-and-processing-of-critical-minerals-and-rare-earths/'
+        },
+        {
+          text: 'Yang, Y., Walton, A., Sheridan, R., Güth, K., Gauß, R., Gutfleisch, O., Buchert, M., Steenari, B.-M., Van Gerven, T., Jones, P. T., & Binnemans, K. (2017). REE recovery from end-of-life NdFeB permanent magnet scrap: A critical review. Journal of Sustainable Metallurgy, 3, 122–149.',
+          url: 'https://doi.org/10.1007/s40831-016-0090-4'
+        }
+      ];
+
+      const referencesList = document.getElementById('referencesList');
+      const refSearchInput = document.getElementById('refSearchInput');
+
+      function renderReferences(filter = '') {
+        const q = filter.toLowerCase().trim();
+        const filtered = references.filter(r => r.text.toLowerCase().includes(q) || r.url.toLowerCase().includes(q));
+        if (filtered.length === 0) {
+          referencesList.innerHTML = `<p class="text-slate-500 italic">Tiada rujukan sepadan dengan carian "${filter}".</p>`;
+          return;
+        }
+        referencesList.innerHTML = filtered.map(r => `
+          <div class="pl-6 -indent-6 pb-3 border-b border-slate-100 dark:border-slate-800/80 last:border-none">
+            <span>${r.text}</span>
+            ${r.url ? `<a href="${r.url}" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 hover:underline break-all ml-1">${r.url}</a>` : ''}
+          </div>
+        `).join('');
+      }
+      renderReferences();
+
+      refSearchInput.addEventListener('input', (e) => {
+        renderReferences(e.target.value);
+      });
+
+      // Copy All References using document.execCommand('copy')
+      const copyRefsBtn = document.getElementById('copyRefsBtn');
+      const toastMsg = document.getElementById('toastMsg');
+      copyRefsBtn.addEventListener('click', () => {
+        const fullText = references.map(r => `${r.text} ${r.url}`.trim()).join('\n\n');
+        const tempArea = document.createElement('textarea');
+        tempArea.value = fullText;
+        document.body.appendChild(tempArea);
+        tempArea.select();
+        try {
+          document.execCommand('copy');
+          toastMsg.classList.remove('hidden');
+          setTimeout(() => toastMsg.classList.add('hidden'), 3000);
+        } catch (err) {
+          console.error('Gagal menyalin rujukan', err);
+        }
+        document.body.removeChild(tempArea);
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+                
