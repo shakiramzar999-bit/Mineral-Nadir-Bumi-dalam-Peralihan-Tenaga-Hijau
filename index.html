@@ -1287,6 +1287,231 @@
       });
     });
   </script>
+<!-- ==================== SECTION: RUANG KOMEN ==================== -->
+<section id="komen" class="section container">
+  <div class="section-head">
+    <span class="sec-tag">Interaksi</span>
+    <h2>Ruang Komen</h2>
+  </div>
+
+  <div class="glass-card">
+    <div class="grid-2">
+      <!-- Borang Komen -->
+      <form id="commentForm" class="glass-subcard" novalidate>
+        <h3>Tulis Komen Anda</h3>
+
+        <label class="field-label" for="commentName">Nama *</label>
+        <input type="text" id="commentName" class="ref-input full-w" placeholder="Contoh: Ahmad Faris" required />
+
+        <label class="field-label mt-12" for="commentRole">Peranan</label>
+        <select id="commentRole" class="ref-input full-w">
+          <option value="Pelajar">Pelajar</option>
+          <option value="Pensyarah / Penilai">Pensyarah / Penilai</option>
+          <option value="Penyelidik">Penyelidik</option>
+          <option value="Pelawat Umum">Pelawat Umum</option>
+        </select>
+
+        <label class="field-label mt-12">Penilaian</label>
+        <div class="star-row" id="starRow" role="radiogroup" aria-label="Penilaian bintang">
+          <button type="button" class="star-btn active" data-star="1">★</button>
+          <button type="button" class="star-btn active" data-star="2">★</button>
+          <button type="button" class="star-btn active" data-star="3">★</button>
+          <button type="button" class="star-btn active" data-star="4">★</button>
+          <button type="button" class="star-btn active" data-star="5">★</button>
+        </div>
+
+        <label class="field-label mt-12" for="commentText">Komen *</label>
+        <textarea id="commentText" class="ref-input full-w" rows="4" placeholder="Kongsi pandangan, soalan atau komen anda mengenai topik REE ini..." required></textarea>
+
+        <div class="btn-row mt-16">
+          <button type="submit" class="action-btn primary-btn">Hantar Komen</button>
+          <button type="button" id="copyFormBtn" class="action-btn">Salin Komen</button>
+        </div>
+        <p class="copy-status" id="commentStatus" aria-live="polite"></p>
+      </form>
+
+      <!-- Senarai Komen -->
+      <div class="glass-subcard">
+        <div class="explorer-top">
+          <h3>Senarai Komen (<span id="commentCount">0</span>)</h3>
+          <button type="button" id="clearCommentsBtn" class="pill">Padam Semua</button>
+        </div>
+        <div id="commentList" class="comment-feed mt-12"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .field-label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px; }
+  .full-w { width: 100%; }
+  .mt-12 { margin-top: 12px; }
+  .star-row { display: flex; gap: 6px; }
+  .star-btn {
+    background: transparent; border: 1px solid var(--border); border-radius: 8px;
+    color: var(--muted); font-size: 1.15rem; padding: 4px 10px; cursor: pointer;
+  }
+  .star-btn.active { color: #fbbf24; border-color: #fbbf24; }
+  .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .primary-btn { background: var(--accent); color: #05110c; border-color: var(--accent); }
+  .comment-feed { display: flex; flex-direction: column; gap: 12px; max-height: 430px; overflow-y: auto; }
+  .comment-item {
+    border: 1px solid var(--border); border-radius: 14px; padding: 14px;
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .comment-meta { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 0.82rem; }
+  .comment-badge {
+    font-size: 0.74rem; padding: 2px 8px; border-radius: 999px;
+    background: rgba(52, 211, 153, 0.16); color: var(--accent);
+  }
+  .comment-body { margin: 8px 0; font-size: 0.92rem; white-space: pre-line; }
+  .comment-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .mini-btn {
+    font-size: 0.78rem; padding: 4px 10px; border-radius: 999px;
+    border: 1px solid var(--border); background: transparent; color: var(--text); cursor: pointer;
+  }
+</style>
+
+<script>
+  (function () {
+    const STORAGE_KEY = "ree_portfolio_comments_clean_v1";
+    const form = document.getElementById("commentForm");
+    const nameInput = document.getElementById("commentName");
+    const roleInput = document.getElementById("commentRole");
+    const textInput = document.getElementById("commentText");
+    const statusEl = document.getElementById("commentStatus");
+    const listEl = document.getElementById("commentList");
+    const countEl = document.getElementById("commentCount");
+    const clearBtn = document.getElementById("clearCommentsBtn");
+    const copyFormBtn = document.getElementById("copyFormBtn");
+    let selectedRating = 5;
+
+    document.querySelectorAll("#starRow .star-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        selectedRating = Number(btn.dataset.star);
+        document.querySelectorAll("#starRow .star-btn").forEach((b) => {
+          b.classList.toggle("active", Number(b.dataset.star) <= selectedRating);
+        });
+      });
+    });
+
+    function loadComments() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+      } catch {
+        return [];
+      }
+    }
+
+    function saveComments(items) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+    }
+
+    function escapeHTML(str) {
+      return str.replace(/[&<>"']/g, (m) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m]));
+    }
+
+    function renderComments() {
+      const items = loadComments();
+      countEl.textContent = items.length;
+      if (!items.length) {
+        listEl.innerHTML = `<p class="muted">Belum ada komen lagi. Jadilah yang pertama meninggalkan komen anda!</p>`;
+        return;
+      }
+      listEl.innerHTML = items.map((item, idx) => `
+        <article class="comment-item">
+          <div class="comment-meta">
+            <div>
+              <strong>${escapeHTML(item.name)}</strong>
+              <span class="comment-badge">${escapeHTML(item.role)}</span>
+            </div>
+            <span class="muted">${"★".repeat(item.rating)}${"☆".repeat(5 - item.rating)} • ${escapeHTML(item.date)}</span>
+          </div>
+          <p class="comment-body">${escapeHTML(item.text)}</p>
+          <div class="comment-actions">
+            <button type="button" class="mini-btn" data-like="${idx}">👍 Membantu (${item.likes || 0})</button>
+            <button type="button" class="mini-btn" data-copy="${idx}">Salin Komen</button>
+          </div>
+        </article>
+      `).join("");
+
+      listEl.querySelectorAll("[data-like]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const items = loadComments();
+          const i = Number(btn.dataset.like);
+          if (items[i]) {
+            items[i].likes = (items[i].likes || 0) + 1;
+            saveComments(items);
+            renderComments();
+          }
+        });
+      });
+
+      listEl.querySelectorAll("[data-copy]").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const items = loadComments();
+          const item = items[Number(btn.dataset.copy)];
+          if (!item) return;
+          const formatted = `Komen oleh ${item.name} (${item.role}) [${item.rating}/5]:\n${item.text}`;
+          try {
+            await navigator.clipboard.writeText(formatted);
+            statusEl.textContent = "Komen telah disalin ke papan klip.";
+          } catch {
+            statusEl.textContent = "Tidak dapat menyalin secara automatik.";
+          }
+        });
+      });
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = nameInput.value.trim();
+      const text = textInput.value.trim();
+      if (!name || !text) {
+        statusEl.textContent = "Sila isi nama dan komen anda sebelum menghantar.";
+        return;
+      }
+      const items = loadComments();
+      items.unshift({
+        name,
+        role: roleInput.value,
+        rating: selectedRating,
+        text,
+        likes: 0,
+        date: new Date().toLocaleDateString("ms-MY", { day: "2-digit", month: "short", year: "numeric" })
+      });
+      saveComments(items);
+      textInput.value = "";
+      statusEl.textContent = "Komen anda berjaya dihantar!";
+      renderComments();
+    });
+
+    copyFormBtn.addEventListener("click", async () => {
+      const name = nameInput.value.trim() || "Pelawat";
+      const text = textInput.value.trim();
+      if (!text) {
+        statusEl.textContent = "Sila tulis komen terlebih dahulu untuk disalin.";
+        return;
+      }
+      const formatted = `Komen oleh ${name} (${roleInput.value}) [${selectedRating}/5]:\n${text}`;
+      try {
+        await navigator.clipboard.writeText(formatted);
+        statusEl.textContent = "Komen telah disalin ke papan klip.";
+      } catch {
+        statusEl.textContent = "Tidak dapat menyalin secara automatik.";
+      }
+    });
+
+    clearBtn.addEventListener("click", () => {
+      localStorage.removeItem(STORAGE_KEY);
+      renderComments();
+      statusEl.textContent = "Semua komen telah dipadam.";
+    });
+
+    renderComments();
+  })();
+</script>
+
 </body>
 </html>
 
